@@ -1,16 +1,11 @@
 
-import os
 import requests
 from requests.auth import HTTPBasicAuth
-from dotenv import load_dotenv
+from utils.config import get_config
 
-# Load credentials from .env
-load_dotenv()
-
-PAYPAL_CLIENT_ID = os.getenv("PAYPAL_CLIENT_ID")
-PAYPAL_CLIENT_SECRET = os.getenv("PAYPAL_CLIENT_SECRET")
-
-PAYPAL_BASE_URL = os.getenv(
+PAYPAL_CLIENT_ID = get_config("PAYPAL_CLIENT_ID")
+PAYPAL_CLIENT_SECRET = get_config("PAYPAL_CLIENT_SECRET")
+PAYPAL_BASE_URL = get_config(
     "PAYPAL_BASE_URL",
     "https://api-m.sandbox.paypal.com"
 )

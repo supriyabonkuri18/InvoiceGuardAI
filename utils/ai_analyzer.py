@@ -1,10 +1,8 @@
 
-import os
 import json
-from dotenv import load_dotenv
+from utils.config import get_config
 from google import genai
 
-load_dotenv()
 
 MODEL_NAME = "gemini-3.6-flash"
 
@@ -16,7 +14,7 @@ def analyze_invoice(
     duplicate_detected=False
 ):
 
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = get_config("GEMINI_API_KEY")
 
     if not api_key:
         return {
