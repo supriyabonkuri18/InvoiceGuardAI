@@ -42,13 +42,13 @@ InvoiceGuardAI/
 │
 ├── utils/
 │   ├── ai_analyzer.py
+│   ├── config.py
 │   ├── invoice_checker.py
 │   ├── invoice_database.py
 │   ├── invoice_extractor.py
 │   └── paypal_payment.py
 │
-└── data/
-    └── invoices.db
+└── data/                 # Generated locally
 ```
 
 The database is generated locally and is not included in the public repository.
@@ -58,7 +58,7 @@ The database is generated locally and is not included in the public repository.
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/supriyabonkuri18/InvoiceGuardAI.git
 cd InvoiceGuardAI
 ```
 
